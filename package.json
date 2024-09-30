@@ -9,7 +9,6 @@
   "author": "vatsal",
   "license": "ISC",
   "dependencies": {
-    "chai": "^4.2.0",
-    "mocha": "^10.7.3"
+    "chai": "^4.2.0"
   }
 }
