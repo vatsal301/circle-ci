@@ -32,7 +32,7 @@ workflows:
           requires:
             - build
       - deploy:
-          require:
+          requires:
             - test
           filters:
             only: main
