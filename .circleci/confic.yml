@@ -1,0 +1,38 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: circleci/node:14 # Use the desired Node.js version
+    steps:
+      - checkout # Checkout the code from the repository
+      - run:
+          name: Install Dependencies
+          command: npm install
+  test:
+    docker:
+      - image: circleci/node:14
+    steps:
+      - checkout
+      - run:
+          name: Run Tests
+          command: npm test # This should execute your tests using Mocha
+  deploy:
+    docker:
+      - image: circleci/node:14
+    steps:
+      - run: echo "Deploying to production server"
+
+workflows:
+  version: 2
+  workFlowName_test:
+    jobs:
+      - build
+      - test:
+          requires:
+            - build
+      - deploy:
+          require:
+            - test
+          filters:
+            only: main
