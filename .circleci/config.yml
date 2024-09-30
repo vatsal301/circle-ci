@@ -8,8 +8,7 @@ jobs:
       - checkout # Checkout the code from the repository
       - run:
           name: Install Dependencies
-          command: npm install
-          command: npm i install mocha
+          command: npm install && npm i install mocha
 
   test:
     docker:
