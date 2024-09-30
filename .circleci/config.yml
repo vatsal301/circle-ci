@@ -28,7 +28,6 @@ jobs:
           command: echo "Deploying to production server" # Replace with actual deployment command
 
 workflows:
-  version: 2
   workFlowName_test:
     jobs:
       - build
