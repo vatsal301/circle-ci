@@ -16,6 +16,9 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Install Dependencies
+          command: npm install # Ensure dependencies are installed
+      - run:
           name: Run Tests
           command: npx mocha # Run Mocha using npx to ensure local execution
 
