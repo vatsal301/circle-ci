@@ -21,4 +21,3 @@ describe("authenticateUser", () => {
     expect(result).to.throw("Username and Password are required");
   });
 });
-// const expect = chai.expect;
