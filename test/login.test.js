@@ -13,13 +13,11 @@ describe("authenticateUser", () => {
     expect(result).to.be.false;
   });
   it("should thorw error if username is missing", () => {
-    expect(() => authenticateUser("vatsal123", undefined)).to.throw(
-      "Username and Password are required"
-    );
+    const result = authenticateUser(undefined, "vatsal123");
+    expect(result).to.throw("Username and Password are required");
   });
   it("should thorw error if password is missing", () => {
-    expect(() => authenticateUser(undefined, "vatsal123")).to.throw(
-      "Username and Password are required"
-    );
+    const result = authenticateUser("vatsal301", undefined);
+    expect(result).to.throw("Username and Password are required");
   });
 });
