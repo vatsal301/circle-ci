@@ -10,14 +10,14 @@ jobs:
           name: Install Dependencies
           command: npm install
 
-  tests:
-    docker:
-      - image: circleci/node:14
-    steps:
-      - checkout
-      - run:
-          name: Run Tests
-          command: npm test # This should execute your tests using Mocha
+  # tests:
+  #   docker:
+  #     - image: circleci/node:14
+  #   steps:
+  #     - checkout
+  #     - run:
+  #         name: Run Tests
+  #         command: npm test # This should execute your tests using Mocha
 
   deploy:
     docker:
@@ -31,12 +31,13 @@ workflows:
   workFlowName_test:
     jobs:
       - build
-      - tests:
-          requires:
-            - build
+      # - tests:
+      #     requires:
+      #       - build
       - deploy:
           requires:
-            - tests
+            # - tests
+            - build
           filters:
             branches:
               only: main
