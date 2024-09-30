@@ -17,7 +17,7 @@ jobs:
       - checkout
       - run:
           name: Run Tests
-          command: npm run test # This should execute your tests using Mocha
+          command: npm test # This should execute your tests using Mocha
 
   deploy:
     docker:
