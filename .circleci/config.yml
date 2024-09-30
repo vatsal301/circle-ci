@@ -9,6 +9,7 @@ jobs:
       - run:
           name: Install Dependencies
           command: npm install
+
   test:
     docker:
       - image: circleci/node:14
@@ -17,11 +18,14 @@ jobs:
       - run:
           name: Run Tests
           command: npm test # This should execute your tests using Mocha
+
   deploy:
     docker:
       - image: circleci/node:14
     steps:
-      - run: echo "Deploying to production server"
+      - run:
+          name: Deploy to Production Server
+          command: echo "Deploying to production server" # Replace with actual deployment command
 
 workflows:
   version: 2
