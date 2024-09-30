@@ -8,7 +8,7 @@ jobs:
       - checkout # Checkout the code from the repository
       - run:
           name: Install Dependencies
-          command: npm install && npm i install mocha
+          command: npm install
 
   test:
     docker:
@@ -17,7 +17,7 @@ jobs:
       - checkout
       - run:
           name: Run Tests
-          command: npm run test # This should execute your tests using Mocha
+          command: npx test # This should execute your tests using Mocha
 
   deploy:
     docker:
