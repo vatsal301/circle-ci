@@ -8,15 +8,15 @@ describe("authenticateUser", () => {
     expect(result).to.be.true;
   });
 
-  it("should reture false for non-existing user", () => {
+  it("should return false for non-existing user", () => {
     const result = authenticateUser("vatsal301", "123");
     expect(result).to.be.false;
   });
-  // it("should thorw error if username is missing", () => {
+  // it("should throw error if username is missing", () => {
   //   const result = authenticateUser(undefined, "vatsal123");
   //   expect(result).to.throw("Username and Password are required");
   // });
-  // it("should thorw error if password is missing", () => {
+  // it("should throw error if password is missing", () => {
   //   const result = authenticateUser("vatsal301", undefined);
   //   expect(result).to.throw("Username and Password are required");
   // });
