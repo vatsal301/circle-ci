@@ -32,10 +32,10 @@ jobs:
           command: |
             pwd
             ls -la
-      - run:
-        name: Deploy to Production Server
-        # command: echo "Deploying to production server" # Replace with your actual deployment command
-        command: node app.js
+     - run:
+          name: Deploy to Production Server
+          # command: echo "Deploying to production server" # Replace with your actual deployment command
+          command: node app.js
 
 workflows:
   version: 2
