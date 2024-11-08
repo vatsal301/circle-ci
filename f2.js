@@ -7,7 +7,7 @@ function fetchData(callback) {
 
 function processData(callback) {
     setTimeout(() => {
-        console.log("Data processed");
+        console.log("Data processed ");
         callback();
     }, 1000);
 }
