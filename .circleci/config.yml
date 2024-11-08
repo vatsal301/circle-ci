@@ -29,11 +29,11 @@ jobs:
       - run:
           name: Deploy to Production Server
           # command: echo "Deploying to production server" # Replace with your actual deployment command
-          command: pwd # Run Node server
+          command: npm run dev # Run Node server
       - run:
           name: Print Working Directory and List Files
           command: |
-            pwd
+            cd /root/project
             ls -la
 
 
