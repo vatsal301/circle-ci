@@ -30,6 +30,12 @@ jobs:
           name: Deploy to Production Server
           # command: echo "Deploying to production server" # Replace with your actual deployment command
           command: pwd # Run Node server
+      - run:
+    name: Print Working Directory and List Files
+    command: |
+      pwd
+      ls -la
+
 
 workflows:
   version: 2
