@@ -28,7 +28,8 @@ jobs:
     steps:
       - run:
           name: Deploy to Production Server
-          command: echo "Deploying to production server" # Replace with your actual deployment command
+          # command: echo "Deploying to production server" # Replace with your actual deployment command
+          command: npm start # Run Node server
 
 workflows:
   version: 2
@@ -36,8 +37,8 @@ workflows:
     jobs:
       # - build
       - build_and_test
-          # requires:
-          #   - build
+        # requires:
+        #   - build
       - deploy:
           requires:
             - build_and_test
