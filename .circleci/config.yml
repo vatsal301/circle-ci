@@ -29,7 +29,7 @@ jobs:
       - run:
           name: Deploy to Production Server
           # command: echo "Deploying to production server" # Replace with your actual deployment command
-          command: ls # Run Node server
+          command: pwd # Run Node server
 
 workflows:
   version: 2
