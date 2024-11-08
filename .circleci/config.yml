@@ -27,20 +27,15 @@ jobs:
     docker:
       - image: node:20.17.0
     steps:
-      - run:
-          name: Deploy to Production Server
-          # command: echo "Deploying to production server" # Replace with your actual deployment command
-          command: pwd # Run Node server
-      - run:
-          name: Check Git Config
-          command: |
-            git config --list
-
-      - run:
+     - run:
           name: Print Working Directory and List Files
           command: |
             pwd
             ls -la
+      - run:
+        name: Deploy to Production Server
+        # command: echo "Deploying to production server" # Replace with your actual deployment command
+        command: node app.js
 
 workflows:
   version: 2
