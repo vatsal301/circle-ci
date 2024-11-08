@@ -24,8 +24,9 @@ jobs:
 
   deploy:
     docker:
-      - image: node:20.17.0
+      - image: node:latest
     steps:
+     - checkout
      - run:
           name: Print Working Directory and List Files
           command: |
